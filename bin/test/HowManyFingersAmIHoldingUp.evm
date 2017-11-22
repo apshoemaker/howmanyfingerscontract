@@ -1,0 +1,167 @@
+    /* "test.sol":26:328 */
+  0x60
+  0x40
+  mstore
+    /* "test.sol":87:88 */
+  0x2
+    /* "test.sol":69:88 */
+  0x0
+  sstore
+    /* "test.sol":26:328 */
+  callvalue
+  tag_0
+  jumpi
+tag_1:
+  dataSize(sub_0)
+  dup1
+  dataOffset(sub_0)
+  0x0
+  codecopy
+  0x0
+  return
+stop
+
+sub_0: assembly {
+        /* "test.sol":26:328 */
+      0x60
+      0x40
+      mstore
+      0x0
+      calldataload
+      0x100000000000000000000000000000000000000000000000000000000
+      swap1
+      div
+      0xffffffff
+      and
+      dup1
+      0x9189fec1
+      eq
+      tag_2
+      jumpi
+    tag_1:
+      tag_0
+      jump
+        /* "test.sol":95:325 */
+    tag_2:
+      callvalue
+      tag_0
+      jumpi
+      tag_3
+      0x4
+      dup1
+      dup1
+      calldataload
+      swap1
+      0x20
+      add
+      swap1
+      swap2
+      swap1
+      pop
+      pop
+      tag_4
+      jump
+    tag_3:
+      0x40
+      mload
+      dup1
+      dup3
+      iszero
+      iszero
+      iszero
+      iszero
+      dup2
+      mstore
+      0x20
+      add
+      swap2
+      pop
+      pop
+      0x40
+      mload
+      dup1
+      swap2
+      sub
+      swap1
+      return
+    tag_4:
+        /* "test.sol":143:147 */
+      0x0
+        /* "test.sol":176:183 */
+      0x0
+      sload
+        /* "test.sol":164:172 */
+      dup3
+        /* "test.sol":164:183 */
+      eq
+        /* "test.sol":160:296 */
+      iszero
+      tag_6
+      jumpi
+        /* "test.sol":199:209 */
+      caller
+        /* "test.sol":199:214 */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+        /* "test.sol":199:217 */
+      0x8fc
+        /* "test.sol":215:216 */
+      0x5
+        /* "test.sol":199:217 */
+      swap1
+      dup2
+      iszero
+      mul
+      swap1
+      0x40
+      mload
+      dup1
+      swap1
+      pop
+      0x0
+      0x40
+      mload
+      dup1
+      dup4
+      sub
+      dup2
+      dup6
+      dup9
+      dup9
+      call
+      swap4
+      pop
+      pop
+      pop
+      pop
+      pop
+        /* "test.sol":238:242 */
+      0x1
+        /* "test.sol":231:242 */
+      swap1
+      pop
+      tag_5
+      jump
+        /* "test.sol":160:296 */
+    tag_6:
+        /* "test.sol":280:285 */
+      0x0
+        /* "test.sol":273:285 */
+      swap1
+      pop
+      tag_5
+      jump
+        /* "test.sol":160:296 */
+    tag_7:
+        /* "test.sol":313:318 */
+      0x0
+        /* "test.sol":306:318 */
+      swap1
+      pop
+        /* "test.sol":95:325 */
+    tag_5:
+      swap2
+      swap1
+      pop
+      jump	// out
+}

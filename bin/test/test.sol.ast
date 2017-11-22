@@ -1,0 +1,77 @@
+PragmaDirective
+   Source: "pragma solidity ^0.4.8;"
+ContractDefinition "HowManyFingersAmIHoldingUp"
+   Source: "contract HowManyFingersAmIHoldingUp {\n\n    uint256 fingers = 2;\n\n    function guess(uint256 theGuess) public returns(bool) {\n\n        if (theGuess == fingers) {\n            msg.sender.send(5);\n            return true;\n        } else {\n            return false;\n        }\n\n        return false;\n    }\n\n}"
+  VariableDeclaration "fingers"
+     Type: uint256
+     Source: "uint256 fingers = 2"
+    ElementaryTypeName uint256
+       Source: "uint256"
+    Literal, token: [no token] value: 2
+       Type: int_const 2
+       Source: "2"
+  FunctionDefinition "guess" - public
+     Source: "function guess(uint256 theGuess) public returns(bool) {\n\n        if (theGuess == fingers) {\n            msg.sender.send(5);\n            return true;\n        } else {\n            return false;\n        }\n\n        return false;\n    }"
+    ParameterList
+       Source: "(uint256 theGuess)"
+      VariableDeclaration "theGuess"
+         Type: uint256
+         Source: "uint256 theGuess"
+        ElementaryTypeName uint256
+           Source: "uint256"
+    ParameterList
+       Source: "(bool)"
+      VariableDeclaration ""
+         Type: bool
+         Source: "bool"
+        ElementaryTypeName bool
+           Source: "bool"
+    Block
+       Source: "{\n\n        if (theGuess == fingers) {\n            msg.sender.send(5);\n            return true;\n        } else {\n            return false;\n        }\n\n        return false;\n    }"
+      IfStatement
+         Source: "if (theGuess == fingers) {\n            msg.sender.send(5);\n            return true;\n        } else {\n            return false;\n        }"
+        BinaryOperation using operator ==
+           Type: bool
+           Source: "theGuess == fingers"
+          Identifier theGuess
+             Type: uint256
+             Source: "theGuess"
+          Identifier fingers
+             Type: uint256
+             Source: "fingers"
+        Block
+           Source: "{\n            msg.sender.send(5);\n            return true;\n        }"
+          ExpressionStatement
+             Source: "msg.sender.send(5)"
+            FunctionCall
+               Type: bool
+               Source: "msg.sender.send(5)"
+              MemberAccess to member send
+                 Type: function (uint256) returns (bool)
+                 Source: "msg.sender.send"
+                MemberAccess to member sender
+                   Type: address
+                   Source: "msg.sender"
+                  Identifier msg
+                     Type: msg
+                     Source: "msg"
+              Literal, token: [no token] value: 5
+                 Type: int_const 5
+                 Source: "5"
+          Return
+             Source: "return true"
+            Literal, token: true value: true
+               Type: bool
+               Source: "true"
+        Block
+           Source: "{\n            return false;\n        }"
+          Return
+             Source: "return false"
+            Literal, token: false value: false
+               Type: bool
+               Source: "false"
+      Return
+         Source: "return false"
+        Literal, token: false value: false
+           Type: bool
+           Source: "false"

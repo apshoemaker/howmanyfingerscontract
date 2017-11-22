@@ -1,0 +1,1 @@
+[{"constant":false,"inputs":[{"name":"theGuess","type":"uint256"}],"name":"guess","outputs":[{"name":"","type":"bool"}],"payable":false,"type":"function"}]
